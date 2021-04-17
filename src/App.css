@@ -124,9 +124,12 @@ html{
   transition: 0.5s;
   padding-top: 60px;
   z-index: 99;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidenav a {
+  font-family: 'Righteous', cursive;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -136,7 +139,19 @@ html{
 }
 
 .sidenav a:hover {
+  padding-left:50px;
   background-color: #ffdb65;
+}
+
+.nav-contact {
+  position: absolute;
+  bottom: 7rem;
+}
+
+.nav-contact a{
+  width: 250px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .sidenav .closeBtn {
@@ -326,4 +341,30 @@ html{
   position:relatives;
   text-align: center;
   color:#726c68;
+}
+
+.nav-feedback{
+  display: flex;
+  align-items: center;
+  position:fixed;
+  font-family: 'Righteous', cursive;
+  z-index: 99;
+  bottom: -1.3rem;
+  left: -1.4rem;
+  font-size: 25px;
+  color:#807B6F;
+  text-decoration: none !important;
+  transform:scale(1,1);
+  transition: all 0.3s;
+}
+
+.nav-feedback img{
+  width: 6rem;
+  height: 6rem;
+}
+
+.nav-feedback:hover {
+  left: -1rem;
+  color:#807B6F;
+  transform:scale(1.2,1.2);
 }

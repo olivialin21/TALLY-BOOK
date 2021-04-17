@@ -9,12 +9,12 @@ import {
 } from "../utils";
 
 export const StoreContext = createContext();
-// let date = localStorage.getItem("date")
+// let lsDate = localStorage.getItem("date")
 //   ? localStorage.getItem("date")
-//   : " ";
+//   : "";
 
 const initialState = {
-  date: new Date(),
+  date: "",
   aClass: "",
   info: [],
 };
@@ -22,10 +22,7 @@ const initialState = {
 function reducer(state, action) {
   switch (action.type) {
     case SET_DATE:
-      // date = {
-      //   ...state,
-      //   date: action.payload,
-      // };
+      console.log(action.payload)
       return {
         ...state,
         date: action.payload,
@@ -64,7 +61,7 @@ function reducer(state, action) {
 export function StoreProvider(props) {
   const [state, dispatch] = useReducerWithThunk(
     reducer,
-    initialState
+    initialState,
   );
   const value = { state, dispatch };
 

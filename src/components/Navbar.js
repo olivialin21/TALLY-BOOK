@@ -1,3 +1,4 @@
+import imgHome from '../images/home.svg'
 import { NavLink } from 'react-router-dom';
 
 export default function NavBar({isOnTouch}) {
@@ -12,19 +13,29 @@ export default function NavBar({isOnTouch}) {
   }
   return (
     <>
-      <div id="mySidenav" class="sidenav">
+      <div id="mySidenav" className="sidenav">
         <div className="closeBtn" onClick={closeNav}>
           &times;
         </div>
-        <NavLink to="/" className="nav-item">
+        <NavLink to="/">
+          <img scr={imgHome} alt="imgHome"/>
           Home
         </NavLink>
-        <NavLink to="/setting" className="nav-item">
+        <NavLink to="/setting">
+          <img scr={imgHome} alt="imgHome"/>
           Setting
         </NavLink>
-        <NavLink to="/feedback" className="nav-item">
-          Feedback
-        </NavLink>
+        <div className="nav-contact">
+          <a href="https://www.facebook.com/groups/568827753582047" target="_blank" rel="noreferrer">
+            Facebook
+          </a>
+          <a href="https://www.instagram.com/define_twoowl_3g/?hl=zh-tw" target="_blank" rel="noreferrer">
+            instagram
+          </a>
+          <a href="https://www.youtube.com/channel/UCmej5oymLBhl8X3TGrd7JKg/" target="_blank" rel="noreferrer">
+            Youtube
+          </a>
+        </div>
       </div>
 
       <span className="hamBtn" onClick={openNav}>&#9776;</span>

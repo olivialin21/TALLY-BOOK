@@ -1,6 +1,6 @@
 import { useEffect, useContext } from "react";
 import { StoreContext } from "../store"
-// import { addCartItem } from "../actions";
+import { addRecord } from "../actions";
 
 export default function AddRecord() {
   const { state: { date, aClass } , dispatch } = useContext(StoreContext);
@@ -12,9 +12,20 @@ export default function AddRecord() {
     const cost = formElement[1].value;
     console.log(ps);
     console.log(cost);
-    // addRecord(dispatch, date, aClass, ps, cost);
-    document.getElementById("form").reset();
-    localStorage.setItem("info",[date, aClass, ps, cost])
+
+    if (ps!=='' && cost!==''){
+      // $("#error").addClass("none");
+      // addRecord(dispatch, date, aClass, ps, cost);
+      localStorage.setItem("info",[date, aClass, ps, cost]);
+      alert("成功");
+      document.getElementById("form").reset();
+    }
+    else {
+      alert("還有空格");
+    }
+
+    // document.getElementById("form").reset();
+    // localStorage.setItem("info",[date, aClass, ps, cost])
   };
 
   // useEffect(()=>{
