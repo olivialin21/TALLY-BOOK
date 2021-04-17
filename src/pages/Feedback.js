@@ -1,14 +1,14 @@
-// import { useContext } from "react";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
+import MessageBoard from "../components/MessageBoard";
 import Footer from "../components/Footer";
-// import { StoreContext } from "../store";
 
 function Feedback() {
   return (
     <div className="container-fluid">
       <Navbar />
       <Header/>
+      <MessageBoard/>
       <Footer/>
     </div>
   );

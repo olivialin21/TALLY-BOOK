@@ -1,7 +1,8 @@
-import imgHome from '../images/home.svg'
+import ImgHome from '../images/home.svg'
+import ImgSetting from '../images/setting.svg'
 import { NavLink } from 'react-router-dom';
 
-export default function NavBar({isOnTouch}) {
+export default function NavBar() {
   const openNav = () => {
     document.getElementById("mySidenav").style.width = "250px";
     console.log("open");
@@ -18,11 +19,11 @@ export default function NavBar({isOnTouch}) {
           &times;
         </div>
         <NavLink to="/">
-          <img scr={imgHome} alt="imgHome"/>
+          <img scr={ImgHome} alt="ImgHome"/>
           Home
         </NavLink>
         <NavLink to="/setting">
-          <img scr={imgHome} alt="imgHome"/>
+          <img scr={ImgSetting} alt="ImgSetting"/>
           Setting
         </NavLink>
         <div className="nav-contact">

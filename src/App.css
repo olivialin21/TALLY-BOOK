@@ -128,6 +128,13 @@ html{
   flex-direction: column;
 }
 
+.sidenav img{
+
+  margin-right: 8px;
+  width: 30px;
+  height: 30px;
+}
+
 .sidenav a {
   font-family: 'Righteous', cursive;
   padding: 8px 8px 8px 32px;
@@ -304,12 +311,14 @@ html{
   font-size: 24px;
   font-family: 'Righteous', 'Roboto';
   color: #000;
+  outline:none;
 }
 
 .inputForm-ok{
   background-color: #DDD7EE;
   color:#FFF !important;
   font-size: 24px;
+  padding-left: 0px !important;
 }
 
 ::placeholder {
@@ -331,6 +340,74 @@ html{
   font-size: 24px;
   font-family: 'Righteous', cursive;
   color: #000;
+}
+
+/* FEEDBACK */
+/* messageBoard */
+.messageBoard {
+  margin-top:100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.messageBoard p{
+  color: #807B6F;
+  font-size: 80px;
+  font-family: 'Righteous', 'Roboto';
+}
+
+.messageForm {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.messageForm input{
+  padding-left: 30px;
+  height: 80px;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+  font-size: 24px;
+  font-family: 'Righteous', 'Roboto';
+  color: #000;
+  outline:none;
+  width: 100%;
+  border: #CCC3B1 5px solid;
+}
+
+.messageForm textarea{
+  padding-left: 30px;
+  padding-top:20px;
+  height: 250px;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+  font-size: 24px;
+  font-family: 'Righteous', 'Roboto';
+  color: #000;
+  outline:none;
+  width: 100%;
+  border: #CCC3B1 5px solid;
+}
+
+.messageForm-submit{
+  max-width: 130px !important;
+  height: 60px !important;
+  background-color: #FFF;
+  color:#807B6F !important;
+  font-size: 24px;
+  font-family: 'Righteous', 'Roboto';
+  padding-left: 0px !important;
+  filter: drop-shadow(2px 4px 3px #b4b4b4);
+  transition: all 0.2s;
+}
+
+.messageForm-submit:hover{
+  color:#FFF !important;
+  background-color: #CCC3B1;
+  transition: all 0.2s;
 }
 
 /* footer */

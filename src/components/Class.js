@@ -1,9 +1,9 @@
-import imgClassB from '../images/icn_home.svg'
+import ImgClassB from '../images/class_b.svg'
 
 export default function Class() {
   return(
     <div className="classes">
-      <img className="classBtn-b" scr={imgClassB} alt="classBtn-b" />
+      <img className="classBtn-b" scr={ImgClassB} alt="classBtn-b" />
       <div className="row d-flex">
         <div className="col">
           <div className="classItem">食</div>
