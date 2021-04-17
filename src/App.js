@@ -1,5 +1,6 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../node_modules/animate.css';
 import './App.css';
 import Home from './pages/Home';
 import Input from './pages/Input';

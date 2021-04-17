@@ -312,13 +312,21 @@ html{
   font-family: 'Righteous', 'Roboto';
   color: #000;
   outline:none;
+  filter: drop-shadow(2px 4px 3px #b4b4b4);
 }
 
 .inputForm-ok{
+  margin-top:30px;
   background-color: #DDD7EE;
   color:#FFF !important;
   font-size: 24px;
   padding-left: 0px !important;
+  transition: all 0.2s;
+}
+
+.inputForm-ok:hover{
+  background-color: #bae5c1;
+  transition: all 0.2s;
 }
 
 ::placeholder {
@@ -355,6 +363,7 @@ html{
   color: #807B6F;
   font-size: 80px;
   font-family: 'Righteous', 'Roboto';
+  -webkit-text-stroke: 0.5px #fff;
 }
 
 .messageForm {

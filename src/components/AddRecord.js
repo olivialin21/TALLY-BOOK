@@ -1,6 +1,7 @@
 import { useEffect, useContext } from "react";
 import { StoreContext } from "../store"
 import { addRecord } from "../actions";
+import sound from "../audios/coin.mp3";
 
 export default function AddRecord() {
   const { state: { date, aClass } , dispatch } = useContext(StoreContext);
@@ -14,10 +15,10 @@ export default function AddRecord() {
     console.log(cost);
 
     if (ps!=='' && cost!==''){
+      (new Audio(sound)).play();
       // $("#error").addClass("none");
       // addRecord(dispatch, date, aClass, ps, cost);
       localStorage.setItem("info",[date, aClass, ps, cost]);
-      alert("成功");
       document.getElementById("form").reset();
     }
     else {
@@ -33,6 +34,6 @@ export default function AddRecord() {
   // }, [])
 
   return (
-    <input className="inputForm-ok" type="submit" value="OK !" onClick={addRecord}/>
+    <input className="animate__animated animate__bounce inputForm-ok" type="submit" value="OK !" onClick={addRecord}/>
   );
 }
