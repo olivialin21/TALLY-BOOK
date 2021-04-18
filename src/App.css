@@ -211,6 +211,74 @@ html{
 }
 
 /* HOME */
+/* ad */
+.ad{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.20);
+}
+
+.ad-img{
+  position: relative;
+  max-width:893px;
+  width:90%;
+  display: flex;
+  justify-content: center;
+}
+
+.ad img{
+  width: 100%;
+}
+
+.ad-ok{
+  cursor: pointer;
+  position: absolute;
+  font-family: 'Righteous', 'Roboto';
+  color:#807B6F;
+  font-size: 40px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 30px;
+  width: 200px;
+  height: 60px;
+  border: 5px solid #CCC3B1;
+  background-color: #fff;
+  bottom: 50px;
+  transition: all 0.2s;
+}
+
+.ad-ok:hover{
+  color:#FFF !important;
+  background-color: #CCC3B1;
+  transition: all 0.2s;
+}
+
+@media (max-width:768px){
+  .ad-ok{
+    bottom:35px;
+    width: 120px;
+    line-height: 40px;
+    height: 50px;
+    font-size: 30px;
+  }
+}
+
+@media (max-width:576px){
+  .ad-ok{
+    bottom:30px;
+    width: 90px;
+    line-height: 28px;
+    height: 35px;
+    font-size: 24px;
+    border: 3px solid #CCC3B1;
+  }
+}
+
 /* info */
 .info{
   position:relative;
@@ -251,10 +319,42 @@ html{
 }
 
 .react-calendar {
+  /* border:0 !important; */
+  border: #babedf 8px solid !important;
   width: 1000px !important;
-  border: 0 !important;
   border-radius: 20px;
   line-height: 3em !important;
+}
+
+.react-calendar__tile abbr{
+  font-family: 'Righteous', 'Roboto';
+  font-size: 24px;
+}
+
+abbr[title], abbr[data-original-title]{
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.react-calendar__navigation__label__labelText{
+  font-size: 18px;
+  font-family: 'Roboto';
+}
+
+.react-calendar__tile--now {
+  background: #FFE7AB !important;
+}
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: #FFE7AB !important;
+}
+
+.react-calendar__tile--active {
+  background: #babedf !important;
+}
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #babedf !important;
 }
 
 /* INPUT */
@@ -301,7 +401,7 @@ html{
   font-size: 45px;
 }
 
-@media (max-width:1200px) {
+@media (max-width:1250px) {
   .classItem{
     width: 100px;
     height: 100px;
@@ -313,6 +413,19 @@ html{
     width: 84px;
     height: 84px;
     font-size: 40px;
+  }
+}
+
+@media (max-width:992px) {
+  .class-rwd-c{
+    display: flex;
+    justify-content: center;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .class-rwd-l{
+    display: flex;
+    justify-content: flex-end;
   }
 }
 

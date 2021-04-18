@@ -5,7 +5,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 
 export default function CalendarObj() {
-  const [ value, onChange] = useState ( new Date() );
+  const [ value, onChange] = useState (new Date());
   const { state: { date } ,dispatch } = useContext(StoreContext);
 
   useEffect(()=>{
