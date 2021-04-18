@@ -366,12 +366,27 @@ html{
   -webkit-text-stroke: 0.5px #fff;
 }
 
+@media(max-width:768px){
+  .messageBoard p{
+    font-size: 60px;
+    -webkit-text-stroke: 0.2px #fff;
+  }
+}
+
+@media(max-width:576px){
+  .messageBoard p{
+    font-size: 45px;
+  }
+}
+
 .messageForm {
+  position: relative;
   max-width: 800px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding:0 20px;
 }
 
 .messageForm input{
@@ -392,7 +407,6 @@ html{
   padding-top:20px;
   height: 250px;
   border-radius: 50px;
-  margin-bottom: 2rem;
   font-size: 24px;
   font-family: 'Righteous', 'Roboto';
   color: #000;
@@ -401,14 +415,34 @@ html{
   border: #CCC3B1 5px solid;
 }
 
+.lotti_hi{
+  position: absolute;
+  bottom:0;
+  right:50px;
+  width:100px;
+  height: 100px;
+}
+
+@media (max-width:576px){
+  .lotti_hi{
+    width: 70px;
+    height: 70px;
+  }
+}
+
 .messageForm-submit{
-  max-width: 130px !important;
-  height: 60px !important;
+  max-width: 130px;
+  height: 60px;
   background-color: #FFF;
-  color:#807B6F !important;
+  color:#807B6F;
+  border-radius: 50px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  outline:none;
+  width: 100%;
+  border: #CCC3B1 5px solid;
   font-size: 24px;
   font-family: 'Righteous', 'Roboto';
-  padding-left: 0px !important;
   filter: drop-shadow(2px 4px 3px #b4b4b4);
   transition: all 0.2s;
 }
@@ -419,9 +453,29 @@ html{
   transition: all 0.2s;
 }
 
+.loading-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 999;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.87);
+}
+
+.loading-animation{
+  width: 200px;
+  height: 200px;
+}
+
+.display-none{
+  display: none;
+}
+
 /* footer */
 .footer{
-  margin:20px 0;
+  margin:20px 0 80px 0;
   height:20px;
   width:100%;
   position:relatives;

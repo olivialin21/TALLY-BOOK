@@ -1,5 +1,8 @@
 import firebase from 'firebase/app';
 import "firebase/firestore";
+import LottieAnimation from '../components/Lottie';
+import hi from '../json/hi.json';
+import Loading from './Loading';
 
 export default function MessageBoard() {
   const firebaseConfig = {
@@ -32,7 +35,11 @@ export default function MessageBoard() {
         "email":email_v,
         "message":message_v
       }).then(() => {
-        document.getElementById("form").reset();
+        document.getElementById("loading-page").classList.remove("display-none");
+        setTimeout(()=>{
+          document.getElementById("loading-page").classList.add("display-none");
+          document.getElementById("form").reset();
+        },3000)  
       });
     } else {
       alert('還有空格');
@@ -40,13 +47,19 @@ export default function MessageBoard() {
   };
 
   return(
-    <div className="messageBoard">
-      <p>FEEDBACK</p>
-      <form id="form" className="messageForm">
-        <input id="email" placeholder="e-mail..."/>
-        <textarea id="message" placeholder="write something..." />
+    <>
+      <Loading/>
+      <div className="messageBoard">
+        <p>FEEDBACK</p>
+        <form id="form" className="messageForm">
+          <input id="email" placeholder="e-mail..."/>
+          <textarea id="message" placeholder="write something..." />
+          <div className="lotti_hi">
+            <LottieAnimation lotti={hi}/>
+          </div>
+        </form>
         <input type="submit" onClick={onClick} value="Submit" className="messageForm-submit"/>
-      </form>
-    </div>
+      </div>
+    </>
   );
 }
