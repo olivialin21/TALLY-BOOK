@@ -26,18 +26,20 @@ html{
 .header{
   position:-webkit-sticky;
   position:sticky;
-  /* top:-130px; */
-  /* z-index:9999; */
 }
 
 .logo{
-  display:block;
+  display: block;
   position:absolute;
   left:106px;
   top:-25px;
   width: 100px;
   transform:scale(1,1);
   transition: all 0.3s ease-out;
+}
+
+.logo img{
+  width:100px;
 }
 
 .logo:hover{
@@ -111,6 +113,19 @@ html{
   }
 }
 
+@media (max-width:576px) {
+  .logo{
+    left:0;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+  }
+
+  .contact{
+    display: none;
+  }
+}
+
 /* navbar */
 .sidenav {
   height: 100%;
@@ -129,7 +144,7 @@ html{
 }
 
 .sidenav img{
-
+  margin-top: -4px;
   margin-right: 8px;
   width: 30px;
   height: 30px;
@@ -315,17 +330,17 @@ html{
   background-color: #fff;
 }
 
+@media (max-width:576px) {
+  .record-table{
+    border-radius: 0;
+  }
+}
+
 /* inputForm */
 .inputForm{
   display: flex;
   flex-direction: column;
   margin:0 30px;
-}
-
-@media (max-width:768px) {
-  .inputForm{
-    margin:30px 5px 0 5px;
-  }
 }
 
 .inputForm input{
@@ -359,23 +374,53 @@ html{
   color: #00000041;
 }
 
-.inputForm-imgHome{
-  width: 30px;
-  height: 30px;
-}
-
 .inputForm-home{
   display: flex;
   justify-content: center;
-  text-decoration: none;
+  align-items: center;
+  transform:scale(1,1);
+  transition:all 0.3s;
 }
 
-.inputForm-home{
-  font-size: 24px;
+.inputForm-home a{
+  text-decoration: none;
+  font-size: 30px;
   font-family: 'Righteous', cursive;
   color: #000;
 }
 
+.inputForm-home:hover{
+  left: -1rem;
+  color:#807B6F;
+  transform:scale(1.2,1.2);
+}
+
+.inputForm-home img{
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+
+@media (max-width:768px) {
+  .inputForm{
+    margin:50px 5px 0 5px;
+  }
+}
+
+@media (max-width:576px) {
+  .inputForm input{
+    height: 55px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+  }
+
+  .inputForm{
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}
+
+/* remind */
 .remind{
   display: flex;
   align-items: flex-end;

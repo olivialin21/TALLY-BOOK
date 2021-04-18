@@ -11,8 +11,8 @@ export default function InputForm() {
         <AddRecord/>
       </form>
       <div className="inputForm-home">
-        <img scr={ImgHome} alt="imgHome" className="inputForm-imgHome"/>
-        <NavLink to="/" className="nav-item">
+        <img src={ImgHome} alt="imgHome"/>
+        <NavLink to="/">
           Home
         </NavLink>
       </div>

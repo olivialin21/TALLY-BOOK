@@ -3,7 +3,7 @@ import ImgClassB from '../images/class_b.svg'
 export default function Class() {
   return(
     <div className="classes">
-      <img className="classBtn-b" scr={ImgClassB} alt="classBtn-b" />
+      <img className="classBtn-b" src={ImgClassB} alt="classBtn-b" />
       <div className="row d-flex">
         <div className="col-lg col-6">
           <div className="classItem">食</div>

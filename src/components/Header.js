@@ -26,7 +26,9 @@ export default function Header() {
   return(
     <header className="header">
       <NavLink to="/">
-        <img className="logo" src={imgLogo} alt="GEGEU3U"/>
+        <div className="logo">
+          <img src={imgLogo} alt="GEGEU3U"/>
+        </div>
       </NavLink>
       <div className="contact">
           <a href="https://www.instagram.com/define_twoowl_3g/?hl=zh-tw" target="_blank" rel="noreferrer">

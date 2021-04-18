@@ -1,5 +1,5 @@
 import ImgHome from '../images/home.svg'
-import ImgSetting from '../images/setting.svg'
+import ImgSetting from '../images/setting.png'
 import { NavLink } from 'react-router-dom';
 
 export default function NavBar() {
@@ -19,11 +19,11 @@ export default function NavBar() {
           &times;
         </div>
         <NavLink to="/">
-          <img scr={ImgHome} alt="ImgHome"/>
+          <img className="nav-icn-home" src={ImgHome} alt="ImgHome" />
           Home
         </NavLink>
         <NavLink to="/setting">
-          <img scr={ImgSetting} alt="ImgSetting"/>
+          <img className="nav-icn-setting" src={ImgSetting} alt="ImgSetting"/>
           Setting
         </NavLink>
         <div className="nav-contact">
