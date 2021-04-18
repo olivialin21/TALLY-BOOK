@@ -14,7 +14,7 @@ export const StoreContext = createContext();
 //   : "";
 
 const initialState = {
-  date: "",
+  date: new Date(),
   aClass: "",
   info: [],
 };
@@ -22,6 +22,7 @@ const initialState = {
 function reducer(state, action) {
   switch (action.type) {
     case SET_DATE:
+      console.log(action.payload+'action.payload');
       return {
         ...state,
         date: action.payload,
@@ -60,7 +61,7 @@ function reducer(state, action) {
 export function StoreProvider(props) {
   const [state, dispatch] = useReducerWithThunk(
     reducer,
-    initialState,
+    initialState
   );
   const value = { state, dispatch };
 

@@ -688,6 +688,13 @@ abbr[title], abbr[data-original-title]{
   margin-bottom: 100px;
 }
 
+@media (max-width:768px){
+  .setting-animation{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 100px;
+  }
+}
 /* footer */
 .footer{
   margin:20px 0 80px 0;
