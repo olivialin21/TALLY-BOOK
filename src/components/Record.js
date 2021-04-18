@@ -1,6 +1,7 @@
 export default function Record() {
   return(
-    <div className="record col-md-5 col-sm-12">
+    <div className="col-md-5 col-sm-12 record">
+      <div className="record-table"></div>
     </div>
   );
 }

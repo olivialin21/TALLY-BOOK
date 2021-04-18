@@ -54,7 +54,7 @@ export default function MessageBoard() {
         <form id="form" className="messageForm">
           <input id="email" placeholder="e-mail..."/>
           <textarea id="message" placeholder="write something..." />
-          <div className="lotti_hi">
+          <div className="messageBoard-animation">
             <LottieAnimation lotti={hi}/>
           </div>
         </form>

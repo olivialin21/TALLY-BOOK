@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Class from "../components/Class";
 import Date from "../components/Date";
 import Record from "../components/Record";
+import Remind from "../components/Remind";
 import InputForm from "../components/InputForm";
 
 function Input() {
@@ -17,6 +18,7 @@ function Input() {
         <div className="row mt-4">
           <Record/>
           <InputForm/>
+          <Remind/>
         </div>
       </div>
       <Footer/>

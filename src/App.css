@@ -280,16 +280,37 @@ html{
 }
 
 .classItem:hover{
-  /* background-color: #d1c8e7; */
   margin:8px 8px;
   width: 96px;
   height: 96px;
   font-size: 45px;
 }
 
+@media (max-width:1200px) {
+  .classItem{
+    width: 100px;
+    height: 100px;
+    font-size:50px;
+  }
+
+  .classItem:hover{
+    margin:8px 8px;
+    width: 84px;
+    height: 84px;
+    font-size: 40px;
+  }
+}
+
 /* record */
 .record{
-  height:500px;
+  padding: 0;
+  margin: 0;
+  height: 500px;
+}
+
+.record-table{
+  height: 100%;
+  width: 100%;
   border-radius: 20px;
   background-color: #fff;
 }
@@ -298,11 +319,16 @@ html{
 .inputForm{
   display: flex;
   flex-direction: column;
+  margin:0 30px;
+}
+
+@media (max-width:768px) {
+  .inputForm{
+    margin:30px 5px 0 5px;
+  }
 }
 
 .inputForm input{
-  margin-left: 30px;
-  margin-right: 30px;
   padding-left: 20px;
   height: 80px;
   border: 0;
@@ -348,6 +374,23 @@ html{
   font-size: 24px;
   font-family: 'Righteous', cursive;
   color: #000;
+}
+
+.remind{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.remind img{
+  max-width: 130px;
+  width: 100%;
+}
+
+@media (max-width:768px) {
+  .remind img{
+    display: none;
+  }
 }
 
 /* FEEDBACK */
@@ -415,7 +458,7 @@ html{
   border: #CCC3B1 5px solid;
 }
 
-.lotti_hi{
+.messageBoard-animation{
   position: absolute;
   bottom:0;
   right:50px;
@@ -424,7 +467,7 @@ html{
 }
 
 @media (max-width:576px){
-  .lotti_hi{
+  .messageBoard-animation{
     width: 70px;
     height: 70px;
   }
@@ -473,12 +516,27 @@ html{
   display: none;
 }
 
+/* SETTING */
+.setting-page{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.setting-animation{
+  width: 200px;
+  height: 200px;
+  margin-bottom: 100px;
+}
+
 /* footer */
 .footer{
   margin:20px 0 80px 0;
   height:20px;
   width:100%;
-  position:relatives;
+  bottom: 0;
+  position: relative;
   text-align: center;
   color:#726c68;
 }
