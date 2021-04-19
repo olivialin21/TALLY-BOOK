@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 // import { StoreContext } from "../store"
-import { setDate } from "../actions";
+// import { setDate } from "../actions";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 
