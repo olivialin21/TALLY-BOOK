@@ -1,7 +1,8 @@
-import { stringToArray , calSum , calSumDay } from '../functions';
+import { stringToArray , calSumDay } from '../functions';
 
 export default function Record() {
   const date = localStorage.getItem("date") ? localStorage.getItem("date") : new Date();
+  let count = parseInt(localStorage.getItem("count"));
   let infoStr = localStorage.getItem("info") === null ? [] : JSON.stringify(localStorage.getItem("info")) ;
   let infoAry = stringToArray(infoStr);
   let info = [];
@@ -12,6 +13,20 @@ export default function Record() {
   })};
   infoFliter();
 
+  const removeRecord = (info) => {
+    console.log(info);
+    let newAry = [];
+    infoAry.map((Ary)=>{
+      if (Ary!==info){
+        newAry.push(Ary);
+      }
+    })
+    localStorage.setItem("info",newAry);
+    count--;
+    localStorage.setItem("count",count);
+    window.location.reload();
+  };
+
   return(
     <div className="col-md-5 col-sm-12 record">
       <div className="record-block">
@@ -20,6 +35,7 @@ export default function Record() {
             <tr>
               <th scope="col">items</th>
               <th scope="col" className="record-table-r">balance</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
@@ -27,12 +43,16 @@ export default function Record() {
               <tr>
                 <td>{info[2]}</td>
                 <td className="record-table-r">{info[3]}</td>
+                <td className="record-x" onClick={() => removeRecord(info)}>
+                  x
+                </td>
               </tr>
             )}
           </tbody>
           <tfoot>
             <td>Total</td>
             <td className="record-table-r">{calSumDay(info)[0]-calSumDay(info)[1]}</td>
+            <td></td>
           </tfoot>
         </table>
       </div>

@@ -516,9 +516,17 @@ abbr[title], abbr[data-original-title]{
 }
 
 .record-x{
+  text-align: center;
+  color:#CCC3B1;
   width: 10%;
-  position:relative;
+  font-size: 24px;
+  cursor: pointer;
 }
+
+.record-x:hover{
+  color:#d8806d;
+}
+
 /* inputForm */
 .inputForm{
   display: flex;
