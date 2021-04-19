@@ -1,5 +1,5 @@
 import sound from "../audios/coin.mp3";
-import { stringToArray } from "../actions/functions";
+import { stringToArray } from "../functions";
 
 export default function AddRecord() {
   const date = localStorage.getItem("date") ? localStorage.getItem("date") : new Date();
