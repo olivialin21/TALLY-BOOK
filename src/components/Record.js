@@ -42,7 +42,9 @@ export default function Record() {
             {info.map(info =>
               <tr>
                 <td>{info[2]}</td>
-                <td className="record-table-r">{info[3]}</td>
+                { (info[1]==="in") ? <td className="record-table-r">{info[3]}</td> :
+                  <td className="record-table-r">-{info[3]}</td>
+                }
                 <td className="record-x" onClick={() => removeRecord(info)}>
                   x
                 </td>
