@@ -2,11 +2,11 @@ import sound from "../audios/coin.mp3";
 import { stringToArray } from "../functions";
 
 export default function AddRecord() {
+  (new Audio(sound)).play();
   const date = localStorage.getItem("date") ? localStorage.getItem("date") : new Date();
   const countInit = () => localStorage.getItem("count") ? localStorage.getItem("count") : localStorage.setItem("count",0);
   countInit();
   let count = parseInt(localStorage.getItem("count"));
-  (new Audio(sound)).play();
   
   const addRecord = (e) => {
     e.preventDefault();
@@ -14,7 +14,7 @@ export default function AddRecord() {
     const ps = formElement[0].value;
     const cost = formElement[1].value;
     
-    if (ps!=='' && cost!==''){
+    if (localStorage.getItem("class") && ps!=='' && cost!==''){
       let aClass = (localStorage.getItem("class"));
       let infoStr = localStorage.getItem("info") === null ? [] : JSON.stringify(localStorage.getItem("info")) ;
       let infoAry = stringToArray(infoStr);
@@ -26,7 +26,7 @@ export default function AddRecord() {
       window.location.reload();
     }
     else {
-      alert("還有空格");
+      alert("您還沒有選擇類別或填滿表格喔！");
     }
   };
 

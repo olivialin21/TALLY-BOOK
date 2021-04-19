@@ -410,6 +410,7 @@ abbr[title], abbr[data-original-title]{
   border-radius: 50%;
   border: #FFF 10px solid;
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 .classItem-in{
