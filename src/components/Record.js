@@ -1,56 +1,41 @@
-import { stringToArray } from '../functions';
+import { useEffect , useState} from 'react';
+import { stringToArray , calSum } from '../actions/functions';
 
 export default function Record() {
   let infoStr = localStorage.getItem("info") === null ? [] : JSON.stringify(localStorage.getItem("info")) ;
   let infoAry = stringToArray(infoStr);
+  // const [info , setInfo] = useState(infoAry);
+
+
+  // useEffect(() => {  
+  //   window.addEventListener('storage', () => {
+  //     infoStr = localStorage.getItem("info") === null ? [] : JSON.stringify(localStorage.getItem("info")) ;
+  //     infoAry = stringToArray(infoStr);
+  //     setInfo(info);
+  //   });
+  // }, [])
 
   return(
     <div className="col-md-5 col-sm-12 record">
-      <div className="record-table">
-        <table>
+      <div className="record-block">
+        <table className="record-table">
           <thead>
             <tr>
-              <th scope="col">Company Name</th>
-              <th scope="col">Number of Items to Ship</th>
-              <th scope="col">Next Action</th>
+              <th scope="col">items</th>
+              <th scope="col" className="record-table-r">balance</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Adam's Greenworks</td>
-              <td>14</td>
-              <td>Package Items</td>
-              <td rowspan="2">what</td>
-            </tr>
-            <tr>
-              <td>Davie's Burgers</td>
-              <td>2</td>
-              <td>Send Invoice</td>
-            </tr>
-            <tr>
-              <td>Baker's Bike Shop</td>
-              <td>3</td>
-              <td>Send Invoice</td>
-            </tr>
-            <tr>
-              <td>Miss Sally's Southern</td>
-              <td>4</td>
-              <td>Ship</td>
-            </tr>
-            <tr>
-              <td>Summit Resort Rentals</td>
-              <td>4</td>
-              <td>Ship</td>
-            </tr>
-            <tr>
-              <td>Strike Fitness</td>
-              <td>1</td>
-              <td>Enter Order</td>
-            </tr>
+            {infoAry.map(info =>
+              <tr>
+                <td>{info[2]}</td>
+                <td className="record-table-r">{info[3]}</td>
+              </tr>
+            )}
           </tbody>
           <tfoot>
             <td>Total</td>
-            <td>28</td>
+            <td className="record-table-r">{calSum()[0]-calSum()[1]}</td>
           </tfoot>
         </table>
       </div>

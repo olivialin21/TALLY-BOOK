@@ -1,5 +1,5 @@
 import sound from "../audios/coin.mp3";
-import { stringToArray } from "../functions";
+import { stringToArray } from "../actions/functions";
 
 export default function AddRecord() {
   const date = localStorage.getItem("date") ? localStorage.getItem("date") : new Date();
@@ -12,8 +12,6 @@ export default function AddRecord() {
     const formElement = document.getElementById("form");
     const ps = formElement[0].value;
     const cost = formElement[1].value;
-    console.log(ps);
-    console.log(cost);
     
     if (ps!=='' && cost!==''){
       (new Audio(sound)).play();
@@ -21,11 +19,11 @@ export default function AddRecord() {
       let infoStr = localStorage.getItem("info") === null ? [] : JSON.stringify(localStorage.getItem("info")) ;
       let infoAry = stringToArray(infoStr);
       infoAry.push([date, aClass, ps, cost]);
-      console.log(infoAry);
       localStorage.setItem("info",infoAry);
       count++;
       localStorage.setItem("count",count);
-      document.getElementById("form").reset();
+      // document.getElementById("form").reset();
+      window.location.reload();
     }
     else {
       alert("還有空格");

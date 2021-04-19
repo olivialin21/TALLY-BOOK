@@ -366,6 +366,8 @@ abbr[title], abbr[data-original-title]{
 .date{
   text-align: center;
   font-size: 24px;
+  font-family: 'Righteous', 'Roboto';
+  margin-bottom: 10px;
 }
 
 /* class */
@@ -436,17 +438,45 @@ abbr[title], abbr[data-original-title]{
   height: 500px;
 }
 
-.record-table{
+.record-block{
   height: 100%;
   width: 100%;
   border-radius: 20px;
   background-color: #fff;
+  padding:20px 30px;
 }
 
 @media (max-width:576px) {
-  .record-table{
+  .record-block{
     border-radius: 0;
   }
+}
+
+.record-table{
+  width: 100%;
+  font-family: 'Righteous', 'Roboto';
+  font-size:24px;
+  color:#b4a890;
+}
+
+.record-table th{
+  font-weight: normal;
+  padding-bottom: 15px;
+}
+
+.record-table td{
+  width: 50%;
+  padding-bottom:10px;
+}
+
+.record-table-r{
+  padding-left: 15px;
+  border-left: #CCC3B1 5px solid;
+}
+
+.record-table tfoot td{
+  padding-top: 10px;
+  border-top: #CCC3B1 5px solid;
 }
 
 /* inputForm */
@@ -690,9 +720,9 @@ abbr[title], abbr[data-original-title]{
 
 @media (max-width:768px){
   .setting-animation{
-    width: 200px;
-    height: 200px;
-    margin-bottom: 100px;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 60px;
   }
 }
 /* footer */

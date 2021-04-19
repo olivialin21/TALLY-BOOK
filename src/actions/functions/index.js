@@ -8,6 +8,7 @@ export const stringToArray = (infoStr) => {
     tempAry2 = infoStr.split(",");
     for (let i=0;i<count;i++){
       tempAry3 = tempAry2.slice(i*4,(i*4+4));
+      console.log(tempAry3);
       infoAry.push(tempAry3);
     }
   }
