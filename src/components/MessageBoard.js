@@ -3,6 +3,7 @@ import "firebase/firestore";
 import LottieAnimation from '../components/Lottie';
 import hi from '../json/hi.json';
 import Loading from './Loading';
+import Alert from './Alert';
 
 export default function MessageBoard() {
   const firebaseConfig = {
@@ -39,15 +40,19 @@ export default function MessageBoard() {
         setTimeout(()=>{
           document.getElementById("loading-page").classList.add("display-none");
           document.getElementById("form").reset();
-        },3000)  
+          document.getElementById("alert").classList.remove("display-none");
+          document.getElementById("alert-c").classList.remove("display-none"); 
+        },3000); 
       });
     } else {
-      alert('還有空格');
+      document.getElementById("alert").classList.remove("display-none");
+      document.getElementById("alert-w").classList.remove("display-none"); 
     }
   };
 
   return(
     <>
+      <Alert/>
       <Loading/>
       <div className="messageBoard">
         <p>FEEDBACK</p>

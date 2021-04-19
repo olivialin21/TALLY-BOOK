@@ -1,4 +1,4 @@
-import LottieAnimation from '../components/Lottie';
+import LottieAnimation from './Lottie';
 import ball from '../json/ball.json';
 
 export default function Loading() {
