@@ -6,7 +6,8 @@ export default function AddRecord() {
   const countInit = () => localStorage.getItem("count") ? localStorage.getItem("count") : localStorage.setItem("count",0);
   countInit();
   let count = parseInt(localStorage.getItem("count"));
-
+  (new Audio(sound)).play();
+  
   const addRecord = (e) => {
     e.preventDefault();
     const formElement = document.getElementById("form");
@@ -14,7 +15,6 @@ export default function AddRecord() {
     const cost = formElement[1].value;
     
     if (ps!=='' && cost!==''){
-      (new Audio(sound)).play();
       let aClass = (localStorage.getItem("class"));
       let infoStr = localStorage.getItem("info") === null ? [] : JSON.stringify(localStorage.getItem("info")) ;
       let infoAry = stringToArray(infoStr);

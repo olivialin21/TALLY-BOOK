@@ -31,3 +31,18 @@ export const calSum = () => {
 
   return ([totIn,totOut]);
 }
+
+export const calSumDay = (infoAry) => {
+  let totOut = 0;
+  let totIn = 0;
+
+  for (let i=0;i<count;i++){
+    if (infoAry[i][1]==="in") {
+      totIn += parseInt(infoAry[i][3]);
+    } else {
+      totOut += parseInt(infoAry[i][3]);
+    }
+  }
+
+  return ([totIn,totOut]);
+}

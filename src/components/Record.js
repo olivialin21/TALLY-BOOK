@@ -1,19 +1,16 @@
-import { useEffect , useState} from 'react';
-import { stringToArray , calSum } from '../actions/functions';
+import { stringToArray , calSum , calSumDay } from '../functions';
 
 export default function Record() {
+  const date = localStorage.getItem("date") ? localStorage.getItem("date") : new Date();
   let infoStr = localStorage.getItem("info") === null ? [] : JSON.stringify(localStorage.getItem("info")) ;
   let infoAry = stringToArray(infoStr);
-  // const [info , setInfo] = useState(infoAry);
-
-
-  // useEffect(() => {  
-  //   window.addEventListener('storage', () => {
-  //     infoStr = localStorage.getItem("info") === null ? [] : JSON.stringify(localStorage.getItem("info")) ;
-  //     infoAry = stringToArray(infoStr);
-  //     setInfo(info);
-  //   });
-  // }, [])
+  let info = [];
+  const infoFliter = () => {infoAry.map((Ary)=>{
+    if (Ary[0]===date){
+      info.push(Ary);
+    }
+  })};
+  infoFliter();
 
   return(
     <div className="col-md-5 col-sm-12 record">
@@ -26,7 +23,7 @@ export default function Record() {
             </tr>
           </thead>
           <tbody>
-            {infoAry.map(info =>
+            {info.map(info =>
               <tr>
                 <td>{info[2]}</td>
                 <td className="record-table-r">{info[3]}</td>
@@ -35,7 +32,7 @@ export default function Record() {
           </tbody>
           <tfoot>
             <td>Total</td>
-            <td className="record-table-r">{calSum()[0]-calSum()[1]}</td>
+            <td className="record-table-r">{calSumDay(info)[0]-calSumDay(info)[1]}</td>
           </tfoot>
         </table>
       </div>

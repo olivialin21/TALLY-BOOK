@@ -7,7 +7,7 @@ export default function Date() {
   return(
     <div className="date">
       {/* {JSON.stringify(date)} */}
-      {localStorage.getItem("date")}
+      {localStorage.getItem("date").substring(0,15)}
     </div>
   );
 }
