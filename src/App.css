@@ -260,7 +260,7 @@ html{
 
 @media (max-width:768px){
   .ad-ok{
-    bottom:35px;
+    bottom:45px;
     width: 120px;
     line-height: 40px;
     height: 50px;
@@ -270,11 +270,11 @@ html{
 
 @media (max-width:576px){
   .ad-ok{
-    bottom:30px;
+    bottom:20px;
     width: 90px;
     line-height: 28px;
     height: 35px;
-    font-size: 24px;
+    font-size: 22px;
     border: 3px solid #CCC3B1;
   }
 }
