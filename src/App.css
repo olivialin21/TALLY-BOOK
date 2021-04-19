@@ -467,6 +467,10 @@ abbr[title], abbr[data-original-title]{
   }
 }
 
+.classItem--active{
+  background-color:#8089d3;
+}
+
 /* record */
 .record{
   padding: 0;
