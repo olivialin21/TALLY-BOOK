@@ -1,10 +1,7 @@
-import { useEffect, useContext } from "react";
-import { StoreContext } from "../store"
-import { addRecord } from "../actions";
 import sound from "../audios/coin.mp3";
+import { stringToArray } from "../functions";
 
 export default function AddRecord() {
-  // const { state: { date, aClass } , dispatch } = useContext(StoreContext);
   const date = localStorage.getItem("date") ? localStorage.getItem("date") : new Date();
   const countInit = () => localStorage.getItem("count") ? localStorage.getItem("count") : localStorage.setItem("count",0);
   countInit();
@@ -20,21 +17,10 @@ export default function AddRecord() {
     
     if (ps!=='' && cost!==''){
       (new Audio(sound)).play();
-      // addRecord(dispatch, date, aClass, ps, cost);
-      let tempAry = localStorage.getItem("info") === null ? [] : JSON.stringify(localStorage.getItem("info")) ;
-      let tempAry2 = [];
-      let tempAry3 = [];
-      let infoAry = [];
-      if (count !== 0){
-        tempAry = tempAry.replace(new RegExp('"', 'g'), '');
-        tempAry2 = tempAry.split(",");
-        for (let i=0;i<count;i++){
-          tempAry3 = tempAry2.slice(i*3,(i*3+3));
-          console.log(tempAry3);
-          infoAry.push(tempAry3);
-        }
-      }
-      infoAry.push([date, ps, cost]);
+      let aClass = (localStorage.getItem("class"));
+      let infoStr = localStorage.getItem("info") === null ? [] : JSON.stringify(localStorage.getItem("info")) ;
+      let infoAry = stringToArray(infoStr);
+      infoAry.push([date, aClass, ps, cost]);
       console.log(infoAry);
       localStorage.setItem("info",infoAry);
       count++;

@@ -1,11 +1,11 @@
-import {
+// import {
   // ADD_RECORD,
   // REMOVE_RECORD,
   // EDIT_RECORD,
-  SET_DATE,
-  ADD_CLASS,
-  ADD_RECORD
-} from "../utils";
+//   SET_DATE,
+//   ADD_CLASS,
+//   ADD_RECORD
+// } from "../utils";
 
 // export const addCartItem = (dispatch, product, qty) => {
 //   const item = {
@@ -46,23 +46,23 @@ import {
 //     }
 //   })
 // }
-export const addRecord = (dispatch, date, aClass, ps, cost) => {
-  dispatch({
-    type: ADD_RECORD,
-    payload: [date, aClass, ps ,cost]
-  });
-};
+// export const addRecord = (dispatch, date, aClass, ps, cost) => {
+//   dispatch({
+//     type: ADD_RECORD,
+//     payload: [date, aClass, ps ,cost]
+//   });
+// };
 
-export const addClass = (dispatch, aClass) => {
-  dispatch({
-    type: ADD_CLASS,
-    payload: aClass
-  });
-};
+// export const addClass = (dispatch, aClass) => {
+//   dispatch({
+//     type: ADD_CLASS,
+//     payload: aClass
+//   });
+// };
 
-export const setDate = (dispatch, date) => {
-  dispatch({
-    type: SET_DATE,
-    payload: date
-  });
-};
+// export const setDate = (dispatch, date) => {
+//   dispatch({
+//     type: SET_DATE,
+//     payload: date
+//   });
+// };
